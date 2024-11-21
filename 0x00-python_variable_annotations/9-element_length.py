@@ -1,14 +1,13 @@
 #!/usr/bin/env python3
 
 '''
-func sum_list
+element lenght func
 '''
 
 
-from typing import List
+from typing import Iterable, Sequence, List, Tuple
 
-def sum_list(input_list: List[float]) -> float:
-    sum = 0.0
-    for ele in input_list:
-        sum += ele
-    return sum
+
+def element_length(lst: Iterable[Sequence]) -> List[Tuple[Sequence, int]]:
+    '''return list of lenght of given list'''
+    return [(i, len(i)) for i in lst]
